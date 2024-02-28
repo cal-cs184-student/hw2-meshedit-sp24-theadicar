@@ -1,0 +1,1185 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		2AC13562F8804437A9662A49 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 41FCCB8076A44E4D829BC83E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				A104AA20E722A298A69B1DCE /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				4633705FBD93461CBE94105B /* PBXTargetDependency */,
+				43DE998CCDFA4C29AAF19949 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		6A994ADF47CE4569B0ED10C6 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F5F31E2B90B541ABB394B1FE /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				D24F6A1F02929F4283925247 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		7F9EFD939DE04CDB8221A3DA /* uninstall */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4CC54BE9A3314A66A8C3974C /* Build configuration list for PBXAggregateTarget "uninstall" */;
+			buildPhases = (
+				85E50E561FD053AAE3D5D263 /* Generate CMakeFiles/uninstall */,
+			);
+			dependencies = (
+				D509438EFC374E188398315C /* PBXTargetDependency */,
+			);
+			name = uninstall;
+			productName = uninstall;
+		};
+		A97EAD62EC5146E2BEAD3662 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3680D296442C44DDA7D5DB34 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				48606578ADAD42D289D72A24 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		08FCF65DF549459AB5B26F78 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/input.c */ = {isa = PBXBuildFile; fileRef = 7741F017B2314862976CE5D4 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/input.c */; };
+		0EEE76246C9A4AB78239DA58 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = 63A997DF4B9244559FB992E7 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/include/GLFW/glfw3.h */; };
+		24FDC589C9784E338BFA2348 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/window.c */ = {isa = PBXBuildFile; fileRef = 1031BE2A892A4E68ABAC1A2C /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/window.c */; };
+		2AF537393D60433BA2CE8377 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = 3AF86D73F3FA4679ABCD3EF1 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/cocoa_window.m */; };
+		35329422F9674620B8B06F69 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/iokit_joystick.m */ = {isa = PBXBuildFile; fileRef = A0B4577A17F346B686BEFE62 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/iokit_joystick.m */; };
+		3677A18D658040FDA4833323 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = 80A590C876E94D88B4E7D907 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/cocoa_monitor.m */; };
+		47094BB4C0B04B48BA07FA30 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = 2279AEB285164B359AC09738 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/cocoa_init.m */; };
+		63618A0F5C9F4FACA5339556 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/monitor.c */ = {isa = PBXBuildFile; fileRef = 1BA927AEC184485EBEBB12B8 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/monitor.c */; };
+		63A6781D0B3647FB98A18A44 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/posix_tls.h */ = {isa = PBXBuildFile; fileRef = 0F03540329654DDEB4748E61 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/posix_tls.h */; };
+		6A5F7254AB844B239C3A9030 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/posix_tls.c */ = {isa = PBXBuildFile; fileRef = B7A38DA56D014E849AB66F68 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/posix_tls.c */; };
+		6AF02F6C5DA84E3581359551 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = 9903DB597C66453FA737EC09 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/include/GLFW/glfw3native.h */; };
+		7013FE365ED64B9380ECEF22 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = B515B5CEC14A4908A2EE8599 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/src/glfw_config.h */; };
+		72E0778A99854BAD84AF2026 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/init.c */ = {isa = PBXBuildFile; fileRef = 678734A869CC4055B1336B1D /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/init.c */; };
+		817EB5E7F5EA48FA92813868 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/context.c */ = {isa = PBXBuildFile; fileRef = C2CC6D8348534EFBBB5D78F1 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/context.c */; };
+		8D41A8FD41584ED68183C6DA /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = F78E5A379BCA45B18B992287 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/CMakeLists.txt */; };
+		A46CC593102B4E19A1A4D248 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/internal.h */ = {isa = PBXBuildFile; fileRef = 7892E45EDBC34BC1AD597A17 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/internal.h */; };
+		A622C7CB146149A6AEC7D509 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/iokit_joystick.h */ = {isa = PBXBuildFile; fileRef = 9AAA562897B541AEB585E007 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/iokit_joystick.h */; };
+		AB16A5F40ECB4B8CABA8CA0F /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = FE263A456D6A4B3DA87BC1F8 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/cocoa_platform.h */; };
+		ACDC7087F9DF4555BEEC3F04 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = 450664ABE6D8478D9AD66739 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/nsgl_context.m */; };
+		C47AC454208348CC934CA775 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/mach_time.c */ = {isa = PBXBuildFile; fileRef = D482CD3FE4F648A1B6AAD647 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/mach_time.c */; };
+		D0B9A1F439724CBBB2111348 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = CCBF543BFC7141858D3CEEB1 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/nsgl_context.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4FA1EDFC820F474F9B9F58BF /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		AE7C9E8EFC4C4C16948DBD97 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		C85EB8B027F44468A953B97A /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		D3258B32E8D1465F9AA2B9B6 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		0D6B09ED181D44B2B56768BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4B346F3B19E4BE9ACB554B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2AC13562F8804437A9662A49;
+			remoteInfo = ALL_BUILD;
+		};
+		3AEE24722E48499E8BF58ACC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4B346F3B19E4BE9ACB554B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B23C4E491464E758EC51042;
+			remoteInfo = glfw;
+		};
+		7A44C374443B46D3960E3C36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4B346F3B19E4BE9ACB554B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A994ADF47CE4569B0ED10C6;
+			remoteInfo = ZERO_CHECK;
+		};
+		94B8DD79B4E34357B238ABC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4B346F3B19E4BE9ACB554B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A994ADF47CE4569B0ED10C6;
+			remoteInfo = ZERO_CHECK;
+		};
+		D8E77E87C4FE43A489C3206E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4B346F3B19E4BE9ACB554B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A994ADF47CE4569B0ED10C6;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F03540329654DDEB4748E61 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/posix_tls.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_tls.h; path = src/posix_tls.h; sourceTree = SOURCE_ROOT; };
+		1031BE2A892A4E68ABAC1A2C /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = src/window.c; sourceTree = SOURCE_ROOT; };
+		1BA927AEC184485EBEBB12B8 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = src/monitor.c; sourceTree = SOURCE_ROOT; };
+		20D2FA18D0AA469C859E21B3 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		2279AEB285164B359AC09738 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = src/cocoa_init.m; sourceTree = SOURCE_ROOT; };
+		3AF86D73F3FA4679ABCD3EF1 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
+		43C76A3C1A124A7B865A4D67 /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		450664ABE6D8478D9AD66739 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
+		63A997DF4B9244559FB992E7 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
+		678734A869CC4055B1336B1D /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = src/init.c; sourceTree = SOURCE_ROOT; };
+		7741F017B2314862976CE5D4 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = src/input.c; sourceTree = SOURCE_ROOT; };
+		7892E45EDBC34BC1AD597A17 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = src/internal.h; sourceTree = SOURCE_ROOT; };
+		80A590C876E94D88B4E7D907 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = src/cocoa_monitor.m; sourceTree = SOURCE_ROOT; };
+		9903DB597C66453FA737EC09 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
+		9AAA562897B541AEB585E007 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/iokit_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = iokit_joystick.h; path = src/iokit_joystick.h; sourceTree = SOURCE_ROOT; };
+		A0B4577A17F346B686BEFE62 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/iokit_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = iokit_joystick.m; path = src/iokit_joystick.m; sourceTree = SOURCE_ROOT; };
+		B515B5CEC14A4908A2EE8599 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = "/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/src/glfw_config.h"; sourceTree = "<absolute>"; };
+		B7A38DA56D014E849AB66F68 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/posix_tls.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_tls.c; path = src/posix_tls.c; sourceTree = SOURCE_ROOT; };
+		C2CC6D8348534EFBBB5D78F1 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = src/context.c; sourceTree = SOURCE_ROOT; };
+		CCBF543BFC7141858D3CEEB1 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = src/nsgl_context.h; sourceTree = SOURCE_ROOT; };
+		D482CD3FE4F648A1B6AAD647 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/mach_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mach_time.c; path = src/mach_time.c; sourceTree = SOURCE_ROOT; };
+		EFA56F6C8640472CAE679BE7 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		F78E5A379BCA45B18B992287 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		FE263A456D6A4B3DA87BC1F8 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = src/cocoa_platform.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		64F269E5636C416CB56EA36B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2700C691D82045458449F08C /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				2279AEB285164B359AC09738 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/cocoa_init.m */,
+				80A590C876E94D88B4E7D907 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/cocoa_monitor.m */,
+				3AF86D73F3FA4679ABCD3EF1 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/cocoa_window.m */,
+				C2CC6D8348534EFBBB5D78F1 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/context.c */,
+				678734A869CC4055B1336B1D /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/init.c */,
+				7741F017B2314862976CE5D4 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/input.c */,
+				A0B4577A17F346B686BEFE62 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/iokit_joystick.m */,
+				D482CD3FE4F648A1B6AAD647 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/mach_time.c */,
+				1BA927AEC184485EBEBB12B8 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/monitor.c */,
+				450664ABE6D8478D9AD66739 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/nsgl_context.m */,
+				B7A38DA56D014E849AB66F68 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/posix_tls.c */,
+				1031BE2A892A4E68ABAC1A2C /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/window.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		2DFF9089E3B74F2B934E38B3 /* glfw */ = {
+			isa = PBXGroup;
+			children = (
+				2700C691D82045458449F08C /* Source Files */,
+				989DB7B028FF4C6D967308AD /* Header Files */,
+				F78E5A379BCA45B18B992287 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/CMakeLists.txt */,
+			);
+			name = glfw;
+			sourceTree = "<group>";
+		};
+		3D97E39770DA476391704A05 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				7D4142C922B344A18470D681 /* CMake Rules */,
+				EFA56F6C8640472CAE679BE7 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		4928401B929948EBB594DF4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		729F9507316649369FB4B935 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43C76A3C1A124A7B865A4D67 /* glfw */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D4142C922B344A18470D681 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		7DDE787E83DB45A09DA6CE52 = {
+			isa = PBXGroup;
+			children = (
+				E36401C46A7545A5B3F13C81 /* uninstall */,
+				3D97E39770DA476391704A05 /* ALL_BUILD */,
+				E7F9AFEA355743CAB59370A0 /* GLFW3 */,
+				729F9507316649369FB4B935 /* Products */,
+				4928401B929948EBB594DF4B /* Frameworks */,
+				B233706AE26D46688809EA6F /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		989DB7B028FF4C6D967308AD /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				63A997DF4B9244559FB992E7 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/include/GLFW/glfw3.h */,
+				9903DB597C66453FA737EC09 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/include/GLFW/glfw3native.h */,
+				FE263A456D6A4B3DA87BC1F8 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/cocoa_platform.h */,
+				7892E45EDBC34BC1AD597A17 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/internal.h */,
+				9AAA562897B541AEB585E007 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/iokit_joystick.h */,
+				CCBF543BFC7141858D3CEEB1 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/nsgl_context.h */,
+				0F03540329654DDEB4748E61 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/posix_tls.h */,
+				B515B5CEC14A4908A2EE8599 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/src/glfw_config.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		A3C0C65384624C129A61CCB0 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		B233706AE26D46688809EA6F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E36401C46A7545A5B3F13C81 /* uninstall */ = {
+			isa = PBXGroup;
+			children = (
+				A3C0C65384624C129A61CCB0 /* CMake Rules */,
+				20D2FA18D0AA469C859E21B3 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/CMakeLists.txt */,
+			);
+			name = uninstall;
+			sourceTree = "<group>";
+		};
+		E7F9AFEA355743CAB59370A0 /* GLFW3 */ = {
+			isa = PBXGroup;
+			children = (
+				2DFF9089E3B74F2B934E38B3 /* glfw */,
+			);
+			name = GLFW3;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6B23C4E491464E758EC51042 /* glfw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78918E323254459589C06C89 /* Build configuration list for PBXNativeTarget "glfw" */;
+			buildPhases = (
+				EB423D57E15B4B1695B501B3 /* Sources */,
+				64F269E5636C416CB56EA36B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3310622BA8547AE9D00E7BB /* PBXTargetDependency */,
+			);
+			name = glfw;
+			productName = glfw;
+			productReference = 43C76A3C1A124A7B865A4D67 /* glfw */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B4B346F3B19E4BE9ACB554B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+			};
+			buildConfigurationList = B35BD9B422B54C34850C94DD /* Build configuration list for PBXProject "GLFW" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4FA1EDFC820F474F9B9F58BF /* Debug */,
+				C85EB8B027F44468A953B97A /* Release */,
+				D3258B32E8D1465F9AA2B9B6 /* MinSizeRel */,
+				AE7C9E8EFC4C4C16948DBD97 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 7DDE787E83DB45A09DA6CE52;
+			projectDirPath = "/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw";
+			projectRoot = "";
+			targets = (
+				2AC13562F8804437A9662A49 /* ALL_BUILD */,
+				6A994ADF47CE4569B0ED10C6 /* ZERO_CHECK */,
+				6B23C4E491464E758EC51042 /* glfw */,
+				A97EAD62EC5146E2BEAD3662 /* install */,
+				7F9EFD939DE04CDB8221A3DA /* uninstall */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		3C8B9B9628600475EB03CBF8 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		85E50E561FD053AAE3D5D263 /* Generate CMakeFiles/uninstall */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/uninstall";
+			outputPaths = (
+"/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/CMakeFiles/uninstall"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw
+  /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -P /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/cmake_uninstall.cmake
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw
+  /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -P /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/cmake_uninstall.cmake
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw
+  /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -P /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/cmake_uninstall.cmake
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw
+  /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -P /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/cmake_uninstall.cmake
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		87AF4882E018677E2624B544 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw
+  /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw
+  /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw
+  /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw
+  /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		A104AA20E722A298A69B1DCE /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+"/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/CMakeFiles/ALL_BUILD"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		D24F6A1F02929F4283925247 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+"/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/CMakeFiles/ZERO_CHECK"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw
+  make -f /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw
+  make -f /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw
+  make -f /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw
+  make -f /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB423D57E15B4B1695B501B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47094BB4C0B04B48BA07FA30 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/cocoa_init.m */,
+				3677A18D658040FDA4833323 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/cocoa_monitor.m */,
+				2AF537393D60433BA2CE8377 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/cocoa_window.m */,
+				817EB5E7F5EA48FA92813868 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/context.c */,
+				72E0778A99854BAD84AF2026 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/init.c */,
+				08FCF65DF549459AB5B26F78 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/input.c */,
+				35329422F9674620B8B06F69 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/iokit_joystick.m */,
+				C47AC454208348CC934CA775 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/mach_time.c */,
+				63618A0F5C9F4FACA5339556 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/monitor.c */,
+				ACDC7087F9DF4555BEEC3F04 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/nsgl_context.m */,
+				6A5F7254AB844B239C3A9030 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/posix_tls.c */,
+				24FDC589C9784E338BFA2348 /* /Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src/window.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43DE998CCDFA4C29AAF19949 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B23C4E491464E758EC51042 /* glfw */;
+			targetProxy = 3AEE24722E48499E8BF58ACC /* PBXContainerItemProxy */;
+		};
+		4633705FBD93461CBE94105B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A994ADF47CE4569B0ED10C6 /* ZERO_CHECK */;
+			targetProxy = D8E77E87C4FE43A489C3206E /* PBXContainerItemProxy */;
+		};
+		48606578ADAD42D289D72A24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2AC13562F8804437A9662A49 /* ALL_BUILD */;
+			targetProxy = 0D6B09ED181D44B2B56768BD /* PBXContainerItemProxy */;
+		};
+		C3310622BA8547AE9D00E7BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A994ADF47CE4569B0ED10C6 /* ZERO_CHECK */;
+			targetProxy = 94B8DD79B4E34357B238ABC1 /* PBXContainerItemProxy */;
+		};
+		D509438EFC374E188398315C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A994ADF47CE4569B0ED10C6 /* ZERO_CHECK */;
+			targetProxy = 7A44C374443B46D3960E3C36 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0199E4BB3DB3497F8EF6DDEA /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/src/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC,_GLFW_USE_CONFIG_H,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src","/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/src","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = ("       -DNDEBUG -fPIC -w   -Wall","$(inherited)");
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/build/glfw.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		069DA5756A024EAE87952DCC /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		1EA839151134491D9BF267FF /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/build";
+			};
+			name = RelWithDebInfo;
+		};
+		23BF22BA20B54B599472958E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		28327016103C4903839BBAB7 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		44AA40C8AB39484EACB82421 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/build";
+			};
+			name = Release;
+		};
+		45600ED877824BD98D8B5BEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		5E2710F259834BDEB4B18958 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/src/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC,_GLFW_USE_CONFIG_H,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src","/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/src","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = ("    -DNDEBUG -fPIC -w   -Wall","$(inherited)");
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/build/glfw.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		6EBDEA49136F44AFADC2085A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/build";
+			};
+			name = MinSizeRel;
+		};
+		757B4838895B48A9970BF8B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk;
+				SYMROOT = "/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/build";
+			};
+			name = Debug;
+		};
+		7E2A76835175478484290EF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/src/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC,_GLFW_USE_CONFIG_H,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src","/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/src","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = ("    -DNDEBUG -fPIC -w   -Wall","$(inherited)");
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/build/glfw.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		8B945899F4B84BF7BF098400 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		A19AAD6A89AC49C8B8D0AEBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		BAD6CFD68BC84DA88F36CF3B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		BE284C93A1CC4D8EBE63FF82 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		C54665FC22F240E9A20D750C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		CB46D159CCC64657A76FC719 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		D311EF1041F94F9F8587086C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/src/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC,_GLFW_USE_CONFIG_H,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/CGL/deps/glfw/src","/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/CGL/deps/glfw/src","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = ("   -fPIC -w   -Wall","$(inherited)");
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/jacksongold/184/hw2-meshedit-sp24-theadicar/xcode/build/glfw.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		D3BC70A0EDD8495CA41327B3 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		DEC42ED8AFC84D6487174361 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		E49013E0C1174C8D9330C35D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		EE22982D3B3C4348904EDDDC /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		F562B3F2DFCA481391F397D7 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		FA11CAFF2497427EAD7E8F66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3680D296442C44DDA7D5DB34 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45600ED877824BD98D8B5BEB /* Debug */,
+				A19AAD6A89AC49C8B8D0AEBF /* Release */,
+				23BF22BA20B54B599472958E /* MinSizeRel */,
+				BE284C93A1CC4D8EBE63FF82 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		41FCCB8076A44E4D829BC83E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEC42ED8AFC84D6487174361 /* Debug */,
+				C54665FC22F240E9A20D750C /* Release */,
+				BAD6CFD68BC84DA88F36CF3B /* MinSizeRel */,
+				28327016103C4903839BBAB7 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4CC54BE9A3314A66A8C3974C /* Build configuration list for PBXAggregateTarget "uninstall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B945899F4B84BF7BF098400 /* Debug */,
+				CB46D159CCC64657A76FC719 /* Release */,
+				D3BC70A0EDD8495CA41327B3 /* MinSizeRel */,
+				069DA5756A024EAE87952DCC /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		78918E323254459589C06C89 /* Build configuration list for PBXNativeTarget "glfw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D311EF1041F94F9F8587086C /* Debug */,
+				7E2A76835175478484290EF2 /* Release */,
+				5E2710F259834BDEB4B18958 /* MinSizeRel */,
+				0199E4BB3DB3497F8EF6DDEA /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B35BD9B422B54C34850C94DD /* Build configuration list for PBXProject "GLFW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				757B4838895B48A9970BF8B3 /* Debug */,
+				44AA40C8AB39484EACB82421 /* Release */,
+				6EBDEA49136F44AFADC2085A /* MinSizeRel */,
+				1EA839151134491D9BF267FF /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F5F31E2B90B541ABB394B1FE /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA11CAFF2497427EAD7E8F66 /* Debug */,
+				E49013E0C1174C8D9330C35D /* Release */,
+				F562B3F2DFCA481391F397D7 /* MinSizeRel */,
+				EE22982D3B3C4348904EDDDC /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B4B346F3B19E4BE9ACB554B1 /* Project object */;
+}
