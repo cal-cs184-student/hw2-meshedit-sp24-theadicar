@@ -272,6 +272,13 @@ namespace CGL
     for (EdgeIter e = mesh.edgesBegin(); e != mesh.edgesEnd(); ++e) {
       e->isNew = false; // Initialize isNew for edges
 
+      HalfedgeIter h0 = e->halfedge();
+      HalfedgeIter h1 = h0->next();
+      HalfedgeIter h2 = h1->next();
+      HalfedgeIter h3 = h0->twin();
+      HalfedgeIter h4 = h3->next();
+      HalfedgeIter h5 = h4->next();
+
       // Calculate edge midpoint newPosition using adjacent vertices (v0, v1) and opposite vertices (v2, v3)
       VertexIter v0 = e->halfedge()->vertex();
       VertexIter v1 = e->halfedge()->twin()->vertex();
