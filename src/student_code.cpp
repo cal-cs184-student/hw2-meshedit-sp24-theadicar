@@ -222,6 +222,7 @@ return e0;
 
     VertexIter v = newVertex();
     v->position = (v0->position + v1->position) / 2.0;
+    v->isNew = true;
 
     EdgeIter e5 = newEdge();
     EdgeIter e6 = newEdge();
@@ -229,6 +230,8 @@ return e0;
 
     FaceIter f3 = newFace();
     FaceIter f4 = newFace();
+
+    // Update values
     h0->setNeighbors(h1, h3, v, e0, f1);
     h1->setNeighbors(h2, h6, v1, e1, f1);
     h2->setNeighbors(h0, h11, v2, e5, f1);
@@ -252,14 +255,19 @@ return e0;
     v3->halfedge() = h5;
     v->halfedge() = h0;
 
+    // Edges touching new vertext have isNew set to true. False, otherwise.
     e0->halfedge() = h0;
+    e0->isNew = false;
     e1->halfedge() = h1;
     e2->halfedge() = h12;
     e3->halfedge() = h14;
     e4->halfedge() = h5;
     e5->halfedge() = h2;
+    e5->isNew = true;
     e6->halfedge() = h10;
+    e6->isNew = false;
     e7->halfedge() = h4;
+    e7->isNew = true;
 
     f1->halfedge() = h0;
     f2->halfedge() = h3;
@@ -280,15 +288,8 @@ return e0;
     // 1. Compute new positions for all the vertices in the input mesh, using the Loop subdivision rule,
     // and store them in Vertex::newPosition. At this point, we also want to mark each vertex as being
     // a vertex of the original mesh.
-    for (EdgeIter e = mesh.edgesBegin(); e != mesh.edgesEnd(); ++e) {
+    for (EdgeIter e = mesh.edgesBegin(); e != mesh.edgesEnd(); e++) {
       e->isNew = false; // Initialize isNew for edges
-
-      HalfedgeIter h0 = e->halfedge();
-      HalfedgeIter h1 = h0->next();
-      HalfedgeIter h2 = h1->next();
-      HalfedgeIter h3 = h0->twin();
-      HalfedgeIter h4 = h3->next();
-      HalfedgeIter h5 = h4->next();
 
       // Calculate edge midpoint newPosition using adjacent vertices (v0, v1) and opposite vertices (v2, v3)
       VertexIter v0 = e->halfedge()->vertex();
@@ -299,7 +300,7 @@ return e0;
     }
 
     // 2. Compute the updated vertex positions associated with edges, and store it in Edge::newPosition.
-    for (VertexIter v = mesh.verticesBegin(); v != mesh.verticesEnd(); ++v) {
+    for (VertexIter v = mesh.verticesBegin(); v != mesh.verticesEnd(); v++) {
         v->isNew = false; // Initialize isNew for vertices
 
         // Calculate new position for each vertex based on its neighbors
@@ -311,7 +312,7 @@ return e0;
             n += 1;
             h = h->twin()->next();
         } while (h != v->halfedge());
-
+        n = v->degree();
         float u = (n == 3.0) ? 3.0 / 16.0 : 3.0 / (8.0 * n);
         v->newPosition = (1.0 - n * u) * v->position + u * neighborPositionSum;
     }
@@ -320,13 +321,23 @@ return e0;
     // are new, by setting the flat Edge::isNew. Note that in this loop, we only want to iterate over edges of
     // the original mesh---otherwise, we'll end up splitting edges that we just split (and the loop will never end!)
     std::vector<EdgeIter> edgesToSplit;
-    for (EdgeIter e = mesh.edgesBegin(); e != mesh.edgesEnd(); ++e) {
+    for (EdgeIter e = mesh.edgesBegin(); e != mesh.edgesEnd(); e++) {
         edgesToSplit.push_back(e);
     }
 
+    // Iterate over each element using a range-based for loop, while checking to prevent infinite loop :)
+    for (EdgeIter edge = mesh.edgesBegin(); edge != mesh.edgesEnd(); edge++) {
+      VertexIter fir = edge->halfedge()->vertex();
+      VertexIter sec = edge->halfedge()->twin()->vertex();
+
+      if(!(fir->isNew || sec->isNew)) {
+        VertexIter split = mesh.splitEdge(edge);
+        split->newPosition = edge->newPosition;
+      }
+    }
 
     // 4. Flip any new edge that connects an old and new vertex.
-    for (EdgeIter e = mesh.edgesBegin(); e != mesh.edgesEnd(); ++e) {
+    for (EdgeIter e = mesh.edgesBegin(); e != mesh.edgesEnd(); e++) {
         if (e->isNew) { // Consider only new edges for flipping
             VertexIter v1 = e->halfedge()->vertex();
             VertexIter v2 = e->halfedge()->twin()->vertex();
