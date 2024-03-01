@@ -291,7 +291,6 @@ return e0;
     for (EdgeIter e = mesh.edgesBegin(); e != mesh.edgesEnd(); e++) {
       e->isNew = false; // Initialize isNew for edges
 
-      // Calculate edge midpoint newPosition using adjacent vertices (v0, v1) and opposite vertices (v2, v3)
       VertexIter v0 = e->halfedge()->vertex();
       VertexIter v1 = e->halfedge()->twin()->vertex();
       VertexIter v2 = e->halfedge()->next()->next()->vertex();
@@ -301,20 +300,19 @@ return e0;
 
     // 2. Compute the updated vertex positions associated with edges, and store it in Edge::newPosition.
     for (VertexIter v = mesh.verticesBegin(); v != mesh.verticesEnd(); v++) {
-        v->isNew = false; // Initialize isNew for vertices
-
-        // Calculate new position for each vertex based on its neighbors
-        Vector3D neighborPositionSum(0, 0, 0);
-        float n = 0.0; // Number of neighbors (vertex degree)
+        v->isNew = false; 
+        Vector3D neighborPositionTotal(0, 0, 0);
+        float n = 0.0; 
         HalfedgeIter h = v->halfedge();
         do {
-            neighborPositionSum += h->twin()->vertex()->position;
+            neighborPositionTotal += h->twin()->vertex()->position;
             n += 1;
             h = h->twin()->next();
-        } while (h != v->halfedge());
+        } 
+        while (h != v->halfedge());
         n = v->degree();
         float u = (n == 3.0) ? 3.0 / 16.0 : 3.0 / (8.0 * n);
-        v->newPosition = (1.0 - n * u) * v->position + u * neighborPositionSum;
+        v->newPosition = (1.0 - n * u) * v->position + u * neighborPositionTotal;
     }
     // 3. Split every edge in the mesh, in any order. For future reference, we're also going to store some
     // information about which subdivide edges come from splitting an edge in the original mesh, and which edges
@@ -325,7 +323,6 @@ return e0;
         edgesToSplit.push_back(e);
     }
 
-    // Iterate over each element using a range-based for loop, while checking to prevent infinite loop :)
     for (EdgeIter edge = mesh.edgesBegin(); edge != mesh.edgesEnd(); edge++) {
       VertexIter fir = edge->halfedge()->vertex();
       VertexIter sec = edge->halfedge()->twin()->vertex();
@@ -338,7 +335,7 @@ return e0;
 
     // 4. Flip any new edge that connects an old and new vertex.
     for (EdgeIter e = mesh.edgesBegin(); e != mesh.edgesEnd(); e++) {
-        if (e->isNew) { // Consider only new edges for flipping
+        if (e->isNew) { 
             VertexIter v1 = e->halfedge()->vertex();
             VertexIter v2 = e->halfedge()->twin()->vertex();
 
@@ -350,8 +347,8 @@ return e0;
 
     // 5. Copy the new vertex positions into final Vertex::position.
     for (VertexIter v = mesh.verticesBegin(); v != mesh.verticesEnd(); ++v) {
-      v->position = v->newPosition; // Update position
-      v->isNew = false; // Reset isNew for all vertices
+      v->position = v->newPosition; 
+      v->isNew = false; 
     }
 
   }
