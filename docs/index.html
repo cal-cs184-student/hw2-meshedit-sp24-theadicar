@@ -49,7 +49,10 @@
 
 <h2 align="middle">Overview</h2>
 <p>
-    YOUR RESPONSE GOES HERE
+  <ul>
+    <li>In this assignment, we implemented de Casteljau’s algorithm to evaluate Bezier curves in 1- and 2-dimensional environments. Then, we were able to implement the <code>HalfEdge</code> data structure covered in lecture to be able to create triangle meshes. Finally, to round it all up, we implemented loop subdivision for higher sampling, allowing us to see a higher resolution rendering of our drawing.</li>
+    <li>While we learned the concepts like de Casteljau at a conceptual level during class, we found it interesting to implement it in a practical assignment. We also found interesting the fact that we had to be precise with certain data structures to represent data, like using <code>Vector2D</code> or <code>Vector3D</code> in certain instances.</li>
+    </ul>    
 </p>
 <br>
 
@@ -63,7 +66,15 @@
   Briefly explain de Casteljau's algorithm and how you implemented it in order to evaluate Bezier curves.
 </b>
 <p>
-    YOUR RESPONSE GOES HERE
+  
+  <ul>
+    <li>At a high level, de Casteljau’s algorithm allows us to evaluate points on a Bezier curve more efficiently. We define the curve through a set of control points, and we recursively subdivide until we reach a single point that lies on the Bezier curve. Here’s a rundown of how we implemented it:<ul>
+    <li>First, as the recursive base case, we check if the number of points in the input vector equals 1. If it does, we’ve hit the base case, are on the curve, and can return.</li>
+    <li>Otherwise, we iterate over the points on the input list of points. For each point, we use linear approximation to go between the current point i in the list and point <code>i + 1</code>, generating a list of size <code>s - 1</code> given an input list of size <code>s</code>.   </li>
+    <li>We return the list of size <code>s - 1</code>. That moves us one step in the algorithm, and you continue until we hit the initially defined base case.</li>
+    </ul>
+    </li>
+    </ul>  
 </p>
 <br>
 
@@ -71,12 +82,9 @@
 <b>
   Take a look at the provided .bzc files and create your own Bezier curve with 6 control points of your choosing. Use this Bezier curve for your screenshots below.
 </b>
-<p>
-    YOUR RESPONSE GOES HERE
-</p>
 <!-- Example of including a single figure -->
 <div align="middle">
-  <img src="images/your_file.png" align="middle" width="50%">
+  <img src="images/q1_step5.png" align="middle" width="400px"/>
 </div>
 <br>
 
@@ -88,29 +96,29 @@
   <table style="width:100%">
     <tr align="center">
       <td>
-        <img src="images/your_file.png" align="middle" width="400px"/>
+        <img src="images/q1_step1.png" align="middle" width="400px"/>
         <figcaption>Level 0</figcaption>
       </td>
       <td>
-        <img src="images/your_file.png" align="middle" width="400px"/>
+        <img src="images/q1_step2.png" align="middle" width="400px"/>
         <figcaption>Level 1</figcaption>
       </td>
     </tr>
     <br>
     <tr align="center">
       <td>
-        <img src="images/your_file.png" align="middle" width="400px"/>
+        <img src="images/q1_step3.png" align="middle" width="400px"/>
         <figcaption>Level 2</figcaption>
       </td>
       <td>
-        <img src="images/your_file.png" align="middle" width="400px"/>
+        <img src="images/q1_step4.png" align="middle" width="400px"/>
         <figcaption>Level 3</figcaption>
       </td>
     </tr>
     <br>
     <tr align="center">
       <td>
-        <img src="images/your_file.png" align="middle" width="400px"/>
+        <img src="images/q1_step5.png" align="middle" width="400px"/>
         <figcaption>Level 4</figcaption>
       </td>
     </tr>
@@ -123,7 +131,7 @@
   Show a screenshot of a slightly different Bezier curve by moving the original control points around and modifying the parameter \(t\) via mouse scrolling.
 </b>
 <p>
-    YOUR RESPONSE GOES HERE
+  <img src="images/q1_modified_curve.png" align="middle" width="400px"/>
 </p>  
 <br>
 
@@ -132,8 +140,16 @@
 <b>
   Briefly explain how de Casteljau algorithm extends to Bezier surfaces and how you implemented it in order to evaluate Bezier surfaces.
 </b>
-<p>
-    YOUR RESPONSE GOES HERE
+<p>  
+  <ul>
+    <li>We can simply extend the algorithm to evaluate the points on surfaces. The functionality is identical, just extended to a 2-dimensional plane. More details about the algorithm, alongside our implementation go as follows:<ul>
+    <li>Similar to Part 1, we check if the # of rows and columns equals 1. If it does, we return this single point which represents the point intersecting the Bezier surface.</li>
+    <li>Otherwise, we iterate over the rows and columns individually. The iteration is implemented identically to Part 1; the main key difference is that we use a Vector3D instead of a Vector2D. This low level implementation is the evaluate1D function, which represents us evaluating one dimension of points, be it the x- or y-axis.</li>
+    <li>For the actual evaluation itself, we iterate over (u, v), creating a list of points evaluating the points along u. Then, we take that entire list of points evaluated along u, and evaluate that along v.</li>
+    </ul>
+    </li>
+    </ul>
+    
 </p>
 <br>
 
@@ -142,7 +158,7 @@
   Show a screenshot of bez/teapot.bez (not .dae) evaluated by your implementation.
 </b>
 <p>
-    YOUR RESPONSE GOES HERE
+  <img src="images/q2_teapot.png" align="middle" width="400px"/>
 </p>
 <br>
 
@@ -155,7 +171,16 @@
   Briefly explain how you implemented the area-weighted vertex normals.
 </b>
 <p>
-    YOUR RESPONSE GOES HERE
+  <ul>
+    <li>To calculate area-weighted vertex normals, we did:<ul>
+    <li><strong>Initialization:</strong> A vector was initialized to zero to accumulate the normals of adjacent faces</li>
+    <li><strong>Traversal:</strong> Utilizing the half-edge data structure, a traversal was performed around the vertex to access each neighboring triangle.</li>
+    <li><strong>Accumulation:</strong> The normal of each triangle, reflecting its area due to the cross product calculation, was added to the accumulator vector.   </li>
+    <li><strong>Normalization:</strong> The accumulated vector, representing the sum of the area-weighted normals, was normalized to yield a unit normal vector.</li>
+    </ul>
+    </li>
+    </ul>
+    
 </p>
 <br>
 
@@ -164,7 +189,21 @@
   Show screenshots of dae/teapot.dae (not .bez) comparing teapot shading with and without vertex normals. Use <kbd>Q</kbd> to toggle default flat shading and Phong shading.
 </b>
 <p>
-    YOUR RESPONSE GOES HERE
+  <div align="middle">
+    <table style="width:100%">
+      <tr align="center">
+        <td>
+          <img src="images/q3_with_normal.png" align="middle" width="400px"/>
+          <figcaption>With vertex normals</figcaption>
+        </td>
+        <td>
+          <img src="images/q3_without_normal.png" align="middle" width="400px"/>
+          <figcaption>Without vertex normals</figcaption>
+        </td>
+      </tr>
+      <br>
+    </table>
+  </div>
 </p>
 <br>
 
@@ -174,7 +213,16 @@
   Briefly explain how you implemented the edge flip operation and describe any interesting implementation / debugging tricks you have used.
 </b>
 <p>
-    YOUR RESPONSE GOES HERE
+  <ul>
+    <li>Implementation Overview:<ul>
+    <li><strong>Boundary Check:</strong> Initial validation to ensure the edge isn&#39;t on the mesh boundary, as boundary edges cannot be flipped.</li>
+    <li><strong>Element Identification:</strong> Gathering all directly involved elements (half-edges, vertices, faces) around the edge.</li>
+    <li><strong>Reassignment of Connections:</strong> Updating the next, vertex, and face pointers for each involved half-edge to reflect the new topology post-flip.</li>
+    <li><strong>Updating References:</strong> Adjusting the half-edge references for affected vertices and faces to point to valid half-edges after the topology change.</li>
+    </ul>
+    </li>
+    </ul>
+    
 </p>
 <br>
 
@@ -183,7 +231,35 @@
   Show screenshots of the teapot before and after some edge flips.
 </b>
 <p>
-    YOUR RESPONSE GOES HERE
+  <div align="middle">
+    <table style="width:100%">
+      <tr align="center">
+        <td>
+          <img src="images/q4_edge_flip0.png" align="middle" width="400px"/>
+          <figcaption>Before edge flip</figcaption>
+        </td>
+        <td>
+          <img src="images/q4_edge_flip1.png" align="middle" width="400px"/>
+          <figcaption>Edge flip 1</figcaption>
+        </td>
+      </tr>
+
+      <br>
+
+      <tr align="center">
+        <td>
+          <img src="images/q4_edge_flip2.png" align="middle" width="400px"/>
+          <figcaption>Edge flip 2</figcaption>
+        </td>
+        <td>
+          <img src="images/q4_edge_flip3.png" align="middle" width="400px"/>
+          <figcaption>Edge flip 3</figcaption>
+        </td>
+      </tr>
+
+      <br>
+    </table>
+  </div>
 </p>
 <br>
 
@@ -192,7 +268,13 @@
     Write about your eventful debugging journey, if you have experienced one.
 </b>
 <p>
-    YOUR RESPONSE GOES HERE
+  <ul>
+    <li>Debugging Overview:<ul>
+    <li>An annoying problem we encountered was the creation of holes in the mesh when flipping an edge twice. Our first implementation to fix this bug ended up creating a hole when the edge is first flipped. We fixed this by emphasizing consistent updates of twin and next pointers for all affected half-edges and ensured reversibility of the flip operation to maintain mesh integrity.</li>
+    <li>As I was writing this writeup, I noticed a new bug I hadn’t seen earlier where an adjacent edge would be removed during a flip. I fixed this by making sure all neighboring edges were accounted for.</li>
+    </ul>
+    </li>
+    </ul>    
 </p>
 <br>
 
@@ -202,7 +284,20 @@
   Briefly explain how you implemented the edge split operation and describe any interesting implementation / debugging tricks you have used.
 </b>
 <p>
-    YOUR RESPONSE GOES HERE
+  <ul>
+    <li>The edge split operation in a half-edge mesh was implemented with updates to the mesh&#39;s topology, ensuring the creation of a new vertex doesn&#39;t compromise the mesh&#39;s integrity. The operation&#39;s complexity escalates when considering boundary edges, necessitating a nuanced approach to maintain the manifold property of the mesh</li>
+    </ul>    
+
+    <ul>
+      <li>Implementation Overview:<ul>
+      <li><strong>Boundary Check:</strong> Initially, verify if the edge is a boundary edge and return immediately if it is, to simplify the operation.</li>
+      <li><strong>Create New Vertex:</strong> Calculate the midpoint of the selected edge and create a new vertex at this location.</li>
+      <li><strong>Generate New Mesh Elements:</strong> Create the necessary additional edges and half-edges to accommodate the split edge. Add new faces if the edge is internal, adjusting the mesh topology around the new vertex.</li>
+      <li><strong>Update Connectivity:</strong> Carefully update the next, twin, vertex, edge, and face pointers for both existing and newly created half-edges. Ensure all vertices, including the new vertex, correctly reference their outgoing half-edges, and newly created edges are properly linked to their corresponding half-edges.</li>
+      </ul>
+      </li>
+      </ul>
+      
 </p>
 <br>
 
@@ -211,7 +306,28 @@
     Show screenshots of a mesh before and after some edge splits. 
 </b>
 <p>
-    YOUR RESPONSE GOES HERE
+  <div align="middle">
+    <table style="width:100%">
+      <tr align="center">
+        <td>
+          <img src="images/q5_split0.png" align="middle" width="400px"/>
+          <figcaption>Before edge splits</figcaption>
+        </td>
+        <td>
+          <img src="images/q5_split1.png" align="middle" width="400px"/>
+          <figcaption>edge split 1</figcaption>
+        </td>
+      </tr>
+      <br>
+      <tr align="center">
+        <td>
+          <img src="images/q5_split2.png" align="middle" width="400px"/>
+          <figcaption>edge split 2</figcaption>
+        </td>
+      </tr>
+      <br>
+    </table>
+  </div>
 </p>
 <br>
 
@@ -220,7 +336,10 @@
     Show screenshots of a mesh before and after a combination of both edge splits and edge flips.
 </b>
 <p>
-    YOUR RESPONSE GOES HERE
+  <td>
+    <img src="images/q5_splits_and_flips.png" align="middle" width="400px"/>
+    <figcaption>after a bunch</figcaption>
+  </td>
 </p>
 <br>
 
@@ -229,7 +348,13 @@
     Write about your eventful debugging journey, if you have experienced one.
 </b>
 <p>
-    YOUR RESPONSE GOES HERE
+  <ul>
+    <li><strong>Debugging Overview:</strong><ul>
+    <li>We ran into a problem with the splitting with flipping. We spent a lot of time trying to figure out why it wasn’t working, even rewriting the code a few times. Turns out it wasn’t a problem with the splitting function but rather the flipping and our splitting function was near correct the first time we wrote it.</li>
+    </ul>
+    </li>
+    </ul>
+    
 </p>
 <br>
 
@@ -238,17 +363,34 @@
     If you have implemented support for boundary edges, show screenshots of your implementation properly handling split operations on boundary edges.
 </b>
 <p>
-    YOUR RESPONSE GOES HERE
+    n/a
 </p>
 <br>
 
 
 <h3 align="middle">Part 6: Loop Subdivision for Mesh Upsampling</h3>
 <b>
-  Briefly explain how you implemented the loop subdivision and describe any interesting implementation / debugging tricks you have used.
+  Brifly explain how you implemented the loop subdivision and describe any interesting implementation / debugging tricks you have used.
 </b>
 <p>
-    YOUR RESPONSE GOES HERE
+  <ul>
+    <li>Implementation Details:<ul>
+    <li><strong>Updating the Vertex Positions:</strong> We use the Loop subdivision rule defined in class and iterate over the points within the input mesh making each vertex’s new position based on its own position as well as the position of its neighbors. We compute the new position and store it in the newPosition attribute of the edge.</li>
+    <li><strong>Splitting Edges:</strong> We simply slit each edge—the order doesn’t matter—and note whether the edge is newly made or already existed before the split. We make use of the <code>isNew</code> attribute to make sure we don’t infinitely divide the edges we iterate over.</li>
+    <li><strong>Edge Flipping:</strong> Next, we iterate over all of the edges and flip those connecting a new and old vertex, as defined from the previous part. </li>
+    <li><strong>Copying Position:</strong> Finally, we move the position of each Vertex from <code>newPosition</code> to position iteratively, and set <code>isNew</code> to false for all edges.</li>
+    </ul>
+    </li>
+    </ul>
+
+    
+  <ul>
+    <li>Debugging Overview:<ul>
+    <li>We encountered some difficulty debugging the problem because, first, the shape wasn’t properly subdividing and just shrunk when we hit <code>L</code>. We realized the issue was that we did not properly update mesh values and instead just stored the new mesh in a separate vector. Additionally, once we resolved that issue, the program seemed to get caught in an infinite loop in the splitting portion of the function.</li>
+    <li>We would like to credit ChatGPT for aid in debugging because we realized that there was some issues with the order for edges set out in #5, and through GPT we realized that we mislabeled some of the edges in #5 not new. Funnily enough, we realized we made the same mistake when debugging #5 as this problem.</li>
+    </ul>
+    </li>
+    </ul>    
 </p>
 <br>
 
@@ -257,7 +399,7 @@
   Take some notes, as well as some screenshots, of your observations on how meshes behave after loop subdivision. What happens to sharp corners and edges? Can you reduce this effect by pre-splitting some edges?
 </b>
 <p>
-    YOUR RESPONSE GOES HERE
+  Sharp edges seem to be rather smoothened out; as we upsample, the cube gets softer corners. It happens more aggressively on the first iterations and the smoothing reduces in later iterations. The equal nature of edge splitting is harsher to sharper edges, which explains why the smoothing is less extreme further down the line. Thus, pre-splitting harsher edges and then performing upsampling would allow us to better preserve the shape of the object.</p>
 </p>
 <br>
 
@@ -266,7 +408,29 @@
   Load dae/cube.dae. Perform several iterations of loop subdivision on the cube. Notice that the cube becomes slightly asymmetric after repeated subdivisions. Can you pre-process the cube with edge flips and splits so that the cube subdivides symmetrically? Document these effects and explain why they occur. Also explain how your pre-processing helps alleviate the effects.
 </b>
 <p>
-    YOUR RESPONSE GOES HERE
+  Like mentioned in the previous part of this question's write-up, the edges are treated harsher than other portions, which results in the mentioned asymmetry. Yes, we could process and more intensely initially divide the edges of the cube to avoid this aggressive smoothening. We can see these effects in the gradual renderings of the image as we further upsample. 
+  <div align="middle">
+    <table style="width:100%">
+      <tr align="center">
+        <td>
+          <img src="images/q6_1.png.png" align="middle" width="400px"/>
+        </td>
+        <td>
+          <img src="images/q6_2.png.png" align="middle" width="400px"/>
+        </td>
+      </tr>
+      <br>
+      <tr align="center">
+        <td>
+          <img src="images/q6_3.png.png" align="middle" width="400px"/>
+        </td>
+        <td>
+          <img src="images/q6_4.png.png" align="middle" width="400px"/>
+        </td>
+      </tr>
+      <br>
+    </table>
+  </div>
 </p>
 <br>
 
